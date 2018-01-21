@@ -2,15 +2,27 @@
 
 Homebridge経由でiOSのHomekitに、TemperとEasyLog(LASCAR L-USB-RT)の温度と湿度を表示できるプラグインです。
 
+It is a plug-in that can display the temperature and humidity of Temper and EasyLog (LASCAR L-USB-RT) on iOS Homekit via Homebridge.
+
+## Screen Shot
+
+![iOS](screenshot/screen-01.png "Startup")
+
 ## Installation
 
 Homebridgeにこのプラグインを追加する前に、TemperまたはEasyLogのCLIプログラムのコンパイルとインストールが必要です。
 
+To Homebridge Before adding this plugin, you need to compile and install the Temper or EasyLog CLI program.
+
 以下にTinkerBoard(TinkerOS,　Debianベース)のインストール方法を参考に記載します。
+
+Refer to the installation method of TinkerBoard (TinkerOS, Debian Based) below by referring.
 
 ### TEMPer
 
-#### Temperの接続確認
+以下にTinkerBoard(TinkerOS,　Debianベース)のインストール方法を参考に記載します。
+
+#### Temper connection check
 
 ```sh
 $ dmesg | grep TEMP
@@ -20,13 +32,13 @@ $ dmesg | grep TEMP
 [395910.051423] hid-generic 0003:0C45:7401.0008: hiddev0,hidraw5: USB HID v1.10 Device [RDing TEMPerV1.4] on usb-ff540000.usb-1.2/input1
 ```
 
-#### Temperの必須ライブラリをインストール
+#### Install TEMPer required libraries
 
 ```sh
 $ sudo apt-get install build-essential libusb-0.1-4 libusb-dev git
 ```
 
-#### TEMPerのmakeとインストール
+#### TEMPer make and install
 
 ```sh
 $ mkdir TEMPer;cd TEMPer
@@ -54,7 +66,7 @@ $ sudo temper
 
 ### EasyLog
 
-#### EasyLogの接続確認
+#### EasyLog connection check
 
 ```sh
 $ dmesg | grep LASCAR
@@ -62,14 +74,14 @@ $ dmesg | grep LASCAR
 [409225.007489] hid-generic 0003:1781:0EC4.0009: hiddev0,hidraw4: USB HID v1.10 Device [LASCAR LTD EL USB RT] on usb-ff540000.usb-1.4/input0
 ```
 
-#### EasyLogの必須ライブラリをインストール
+#### Install EasyLog required libraries
 
 ```sh
 $ sudo apt-get install subversion automake libtool xsltproc docbook docbook-xsl xorg-docs doxygen libusb-0.1-4 libusb-dev 
 
 ```
 
-#### EasyLogの必須ライブラリ(libhid)をmakeしてインストール
+#### Make and install EasyLog required library (libhid)
 
 ```sh
 $ mkdir -p EasyLog/libhid;cd EasyLog/libhid
@@ -138,7 +150,7 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-#### lascar-usb-thermometerのインストール
+#### lascar-usb-thermometer make and install
 
 ```sh
 $ git clone https://github.com/rca/lascar-usb-thermometer.git
@@ -150,18 +162,25 @@ $ sudo usb_termometer
 temp: 24.0, hum: 40.5
 ```
 
-### Plugin
+### Plugin install
 
 ```sh
-
+$ npm install -g homebridge-temper
 ```
 
 ## Configuration
 
 `config.json`の`platforms`に下記の様に追加してください。
 
+Please add it to `platforms` of `config.json` as follows.
+
 `accessories`の`type`は`temper`または`easylog`です、USBに接続している機器のみ記述してください。
+
+`accessory` `type` is `temper` or`easylog`, please describe only the devices connected to USB.
+
 `services`の`subType`は`accessories`の中で一意になる様にしてください。
+
+Make matter `subType` of `services` unique within `accessories`.
 
 ```json
 {
@@ -207,3 +226,30 @@ temp: 24.0, hum: 40.5
     ]
 }
 ```
+
+## Contribution
+Licenceに「Apache License Version 2.0」を選択しており、修正いただいた場合は「Pull Request」をお願いします。
+
+"Apache License Version 2.0" has been selected for Licence and if you correct, please give "Pull Request".
+
+1. Fork ([https://github.com/tcnksm/tool/fork](https://github.com/tcnksm/tool/fork))
+2. Create a feature branch
+3. Commit your changes
+4. Rebase your local changes against the master branch
+5. Run and Test
+6. Create new Pull Request
+
+## Licence
+* [**Apache License Version 2.0, January 2004**](./LICENSE)
+
+## Author
+* [**@kght6123**](https://twitter.com/kght6123)
+
+## Contacts
+
+公開内容の詳細に関しては[**@kght6123**](https://twitter.com/kght6123)まで、お気軽にお問い合わせ下さい。
+
+For more details on the public content please feel free to contact us at [**@kght6123**](https://twitter.com/kght6123).
+
+## Copyright
+**```Copyright (c) 2018 Hirotaka Koga```**
