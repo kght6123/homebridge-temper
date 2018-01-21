@@ -1,11 +1,14 @@
 {
   "name": "homebridge-temper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Temper Platform plugin for homebridge: https://github.com/nfarina/homebridge",
   "main": "index.js",
   "license": "Apache License 2.0",
   "keywords": [
-    "homebridge-plugin", "temper", "easylog", "npm"
+    "homebridge-plugin",
+    "temper",
+    "easylog",
+    "npm"
   ],
   "repository": {
     "type": "git",
