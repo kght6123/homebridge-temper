@@ -1,0 +1,23 @@
+{
+  "name": "homebridge-temper",
+  "version": "1.0.0",
+  "description": "Temper Platform plugin for homebridge: https://github.com/nfarina/homebridge",
+  "main": "index.js",
+  "license": "Apache License 2.0",
+  "keywords": [
+    "homebridge-plugin", "temper", "easylog", "npm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+http://github.com/kght6123/homebridge-temper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kght6123/homebridge-temper/issues"
+  },
+  "author": "kght6123",
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "homepage": "http://monokuro.rabbit-ears.jp/"
+}

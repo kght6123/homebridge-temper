@@ -1,0 +1,8 @@
+{
+  "name": "homebridge-temper",
+  "dependencies": {},
+  "globalDependencies": {
+    "index": "github:KhaosT/HAP-NodeJS/index.d.ts",
+    "node": "registry:dt/node#7.0.0+20170322231424"
+  }
+}
