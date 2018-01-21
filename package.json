@@ -1,6 +1,6 @@
 {
   "name": "homebridge-temper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Temper Platform plugin for homebridge: https://github.com/nfarina/homebridge",
   "main": "index.js",
   "license": "Apache License 2.0",
