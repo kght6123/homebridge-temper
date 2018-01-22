@@ -1,6 +1,6 @@
 # Homebridge Temper(Easylog) Plugin
 
-Homebridge経由でiOSのHomekitに、TemperとEasyLog(LASCAR L-USB-RT)の温度と湿度を表示できるプラグインです。
+Homebridge経由でiOSのHomekitに、TemperとEasyLog(LASCAR L-USB-RT)の温度と湿度を表示できるプラグインです。
 
 It is a plug-in that can display the temperature and humidity of Temper and EasyLog (LASCAR L-USB-RT) on iOS Homekit via Homebridge.
 
@@ -10,17 +10,15 @@ It is a plug-in that can display the temperature and humidity of Temper and Easy
 
 ## Installation
 
-Homebridgeにこのプラグインを追加する前に、TemperまたはEasyLogのCLIプログラムのコンパイルとインストールが必要です。
+このプラグインをHomebridgeに追加する前に、TemperまたはEasyLogのCLIプログラムのコンパイルとインストールが必要です。
 
 To Homebridge Before adding this plugin, you need to compile and install the Temper or EasyLog CLI program.
 
-以下にTinkerBoard(TinkerOS,　Debianベース)のインストール方法を参考に記載します。
+以下にTinkerBoard(TinkerOS,　Debianベース)のインストール方法を参考に記載します。
 
 Refer to the installation method of TinkerBoard (TinkerOS, Debian Based) below by referring.
 
 ### TEMPer
-
-以下にTinkerBoard(TinkerOS,　Debianベース)のインストール方法を参考に記載します。
 
 #### Temper connection check
 
@@ -170,7 +168,7 @@ $ npm install -g homebridge-temper
 
 ## Configuration
 
-`config.json`の`platforms`に下記の様に追加してください。
+`config.json`の`platforms`に下記の様に追加してください。
 
 Please add it to `platforms` of `config.json` as follows.
 
